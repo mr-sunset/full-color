@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+
+
+}
+
+#controls {
+    display: inline-grid;
+    place-items: center;
+}
+
+#color-picker,
+#random-color {
+    margin-top: 10px;
+}
+
+#color-picker {
+    appearance: none;
+}
+
+#random-color {
+    padding: 10px 10px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.12s ease;
+}
+
+#random-color:active {
+    transform: scale(0.95);
+}
