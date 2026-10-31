@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomColor = document.getElementById('random-color');
 
     colorPicker.addEventListener('change', (e) => {
-        document.body.style.backgroundColor = event.target.value;
+        document.body.style.backgroundColor = e.target.value;
     })
 })

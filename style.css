@@ -7,26 +7,50 @@ body {
     margin: 0;
     height: 100vh;
 
-
+    background-color: black;
 }
 
+/* Parent element */
 #controls {
     display: inline-grid;
     place-items: center;
+
+    border: 4px solid rgba(100, 100, 100, 0.8);
+    border-radius: 16px;
+    padding: 10px;
 }
 
-#color-picker,
+/* Color picker */
+#color-picker {
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+/* Random color button */
 #random-color {
     margin-top: 10px;
 }
 
-#color-picker {
-    appearance: none;
-}
-
 #random-color {
     padding: 10px 10px;
-    border: 2px solid gray;
+    border: 2px solid rgba(100, 100, 100, 0.8);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.12s ease;
