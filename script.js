@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hide controls on rest
     window.addEventListener('mousemove', handleMouseMovement);
+    window.addEventListener('touchstart', handleMouseMovement)
 
     function handleMouseMovement() {
         // Show controls
