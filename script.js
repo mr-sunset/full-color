@@ -2,20 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const controls = document.getElementById("controls");
     const colorPicker = document.getElementById('color-picker');
     const randomColor = document.getElementById('random-color');
+    const hexCode = document.getElementById('hex-code');
     let hideTimer;
 
     // Change bg color when color picker is clicked away from
     colorPicker.addEventListener('change', (e) => {
-        document.body.style.backgroundColor = e.target.value;
+        setBackgroundColor(e.target.value);
     })
 
     // Generate random color
     randomColor.addEventListener("click", () => {
-        const r = Math.floor(Math.random() * 256);
-        const g = Math.floor(Math.random() * 256);
-        const b = Math.floor(Math.random() * 256);
+        const randomHex = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
 
-        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        setBackgroundColor(randomHex);
     });
 
     // Hide controls on rest
@@ -32,5 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
         hideTimer = setTimeout(() => {
             controls.classList.add('hidden');
         }, 2000);
+    }
+
+    // Update both the body color, color picker preview, and hex-code
+    function setBackgroundColor(hex) {
+        document.body.style.backgroundColor = hex;
+        hexCode.textContent = hex;
+        colorPicker.value = hex;
     }
 })

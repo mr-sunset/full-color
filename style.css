@@ -81,3 +81,12 @@ input[type="color"]::-moz-color-swatch {
 #random-color:active {
     transform: scale(0.95);
 }
+
+/* Hex color */
+#hex-code {
+    padding-top: 10px;
+
+    font-family: "Roboto Mono", monospace, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
